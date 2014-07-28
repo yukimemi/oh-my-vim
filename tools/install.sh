@@ -38,9 +38,10 @@ if [[ `uname` == 'Darwin' ]]; then
     cp $OH_MY_VIM"/font/DroidSansMono/Droid Sans Mono for Powerline.otf" ~/Library/fonts/
 fi
 
-# link local.vimrc and after.vimrc
+# link other files
 ln -sf $OH_MY_VIM/local.vimrc ~/.local.vimrc
 ln -sf $OH_MY_VIM/after.vimrc ~/.after.vimrc
+ln -sf $OH_MY_VIM/gvimrc ~/.gvimrc
 
 echo "\033[0;32m"'  ____  __     __  _____  __  _   ________  ___  '"\033[0m"
 echo "\033[0;32m"' / __ \/ /    /  |/  /\ \/ / | | / /  _/  |/  /  '"\033[0m"
