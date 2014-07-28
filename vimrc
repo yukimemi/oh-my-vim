@@ -86,15 +86,8 @@ NeoBundleLazy 'osyo-manga/unite-quickfix', {'autoload':{'unite_sources':
 NeoBundleLazy 'osyo-manga/unite-fold', {'autoload':{'unite_sources':'fold'}}
 NeoBundleLazy 'tacroe/unite-mark', {'autoload':{'unite_sources':'mark'}}
 NeoBundleLazy 'tsukkee/unite-tag', {'autoload':{'unite_sources':'tag'}}
-NeoBundleLazy 'Shougo/neomru.vim', {'autoload':{'unite_sources': 
-            \['file_mru', 'directory_mru']}}
-
-" }}}
-
-" GUI {{{
-
-" A better looking status line
-NeoBundle 'bling/vim-airline'
+NeoBundleLazy 'Shougo/neomru.vim', {'autoload':{'unite_sources':
+            \ ['file_mru', 'directory_mru', 'neomru/file']}}
 
 " }}}
 
@@ -165,20 +158,6 @@ endfor
 
 " PLUGINS Setup {{{
 
-" Airline {{{
-
-set noshowmode
-
-let g:airline_theme='powerlineish'
-let g:airline_enable_branch=1
-let g:airline_powerline_fonts=1
-let g:airline_detect_whitespace = 1
-let g:airline#extensions#hunks#non_zero_only = 1
-
-" let g:airline#extensions#tabline#enabled = 2
-" let g:airline#extensions#tabline#fnamemod = ':t'
-" let g:airline#extensions#tabline#buffer_min_count = 1
-
 " }}}
 
 " Font {{{
@@ -199,7 +178,7 @@ let g:neomru#directory_mru_path = $OH_MY_VIM.'/tmp/neomru/directory'
 " files
 nnoremap <silent><Leader>o :Unite -silent -start-insert file<CR>
 nnoremap <silent><Leader>O :Unite -silent -start-insert file_rec/async<CR>
-nnoremap <silent><Leader>m :Unite -silent file_mru<CR>
+nnoremap <silent><Leader>m :Unite -silent neomru/file<CR>
 " buffers
 nnoremap <silent><Leader>b :Unite -silent buffer<CR>
 " tabs

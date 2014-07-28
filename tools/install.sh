@@ -10,7 +10,7 @@ if [ -d "$OH_MY_VIM" ]; then
 fi
 
 echo "\033[0;34mCloning Oh My Vim...\033[0m"
-hash git >/dev/null 2>&1 && /usr/bin/env git clone https://github.com/liangxianzhe/oh-my-vim.git $OH_MY_VIM || {
+hash git >/dev/null 2>&1 && /usr/bin/env git clone git@github.com:yukimemi/oh-my-vim.git $OH_MY_VIM || {
   echo "git not installed"
   exit
 }
@@ -37,6 +37,10 @@ if [[ `uname` == 'Darwin' ]]; then
     echo "\033[0;34mInstalling font...\033[0m"
     cp $OH_MY_VIM"/font/DroidSansMono/Droid Sans Mono for Powerline.otf" ~/Library/fonts/
 fi
+
+# link local.vimrc and after.vimrc
+ln -sf $OH_MY_VIM/.local.vimrc ~/
+ln -sf $OH_MY_VIM/.after.vimrc ~/
 
 echo "\033[0;32m"'  ____  __     __  _____  __  _   ________  ___  '"\033[0m"
 echo "\033[0;32m"' / __ \/ /    /  |/  /\ \/ / | | / /  _/  |/  /  '"\033[0m"
