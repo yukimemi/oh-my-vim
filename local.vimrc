@@ -2,7 +2,7 @@
 NeoBundle 'LeafCage/foldCC'
 NeoBundle 'LeafCage/yankround.vim', {'depends': 'kien/ctrlp.vim'}
 NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'banyan/recognize_charcode.vim'
+" NeoBundle 'banyan/recognize_charcode.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'chrisbra/Recover.vim'
 NeoBundle 'cocopon/lightline-hybrid.vim', {'depends': 'itchyny/lightline.vim'}

@@ -8,7 +8,7 @@
 " Admin virtualenvs
 NeoBundle 'jmcantrell/vim-virtualenv'
 " Show indent lines
-NeoBundleLazy 'Yggdroot/indentLine', {'autoload': {'filetypes': ['python']}}
+NeoBundleLazy 'Yggdroot/indentLine', {'autoload': {'filetypes': ['python'], 'commands': ['IndentLinesToggle']}}
 " A Python plugin
 NeoBundleLazy 'klen/python-mode', {'autoload': {'filetypes': ['python']}}
 " Show reports from coverage.py

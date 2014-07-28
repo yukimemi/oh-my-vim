@@ -50,11 +50,11 @@ inoremap %s/ %s/\v
 "===================================================================================}}}
 
 "{{{ ========== Appearance ============================================================
-set list
+" set list
 if s:is_windows
     set listchars=tab:>\ ,trail:-,extends:>,precedes:<
 else
-    set listchars=tab:\¦\ ,trail:-,extends:»,precedes:«,nbsp:%
+"     set listchars=tab:\¦\ ,trail:-,extends:»,precedes:«,nbsp:%
 endif
 highlight Search ctermbg=88
 "===================================================================================}}}
@@ -210,7 +210,7 @@ if neobundle#tap('lightline.vim')"{{{
                     \ }
     else
         let g:lightline = {
-                    \ 'colorscheme': 'Tomorrow_Night',
+                    \ 'colorscheme': 'solarized',
                     \ 'mode_map': { 'c': 'NORMAL' },
                     \ 'active': {
                     \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename', 'anzu' ] ]
@@ -1108,7 +1108,7 @@ if neobundle#tap('vim-automatic')"{{{
 
     nnoremap <silent> <Plug>(quit) :<C-u>q<CR>
     function! s:my_temporary_window_init(config, context)
-        silent! nunmap <ESC><ESC>
+"         silent! nunmap <ESC><ESC>
         nmap <buffer> <C-[> <Plug>(quit)
     endfunction
 
@@ -1127,7 +1127,7 @@ if neobundle#tap('vim-automatic')"{{{
                 \   {'match': {'bufname': 'MacDict.*'}},
                 \   {
                 \       'match': {
-                \           'autocmd_history_pattern' : 'BufWinEnterFileType$',
+                \           'autocmd_history_pattern': 'BufWinEnterFileType$',
                 \           'filetype' : 'unite'
                 \       },
                 \       'set': {
